@@ -9,7 +9,6 @@ import 'rxjs/add/operator/map';
 })
 export class TaipeiopendataComponent implements OnInit {
   data: any;
-  posts:any[];
 
   constructor(private _http: Http) { }
 
@@ -19,7 +18,8 @@ export class TaipeiopendataComponent implements OnInit {
     // this._http.get(url).map(x=>x.json()).subscribe((obj)=>{
     //   this.posts=obj;
     // })
-    this._http.get(url).map(x=>x.json());
+    console.log(url);
+    this.data = this._http.get(url).map(x => x.json());
   }
 
 }
