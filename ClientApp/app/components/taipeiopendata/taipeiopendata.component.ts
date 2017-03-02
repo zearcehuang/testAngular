@@ -13,12 +13,13 @@ export class TaipeiopendataComponent implements OnInit {
   constructor(private _http: Http) { }
 
   ngOnInit() {
-    let url = "/opendata/datalist/apiAccess?scope=resourceAquire&rid=5697d81f-7c9d-43fc-a202-ae8804bbd34b";
-    //this.data = this._http.get(url).map(x => x.json());
+    let url = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=0b544701-fb47-4fa9-90f1-15b1987da0f5";
+    // this.data = this._http.get(url).map(x => x.json());
     // this._http.get(url).map(x=>x.json()).subscribe((obj)=>{
-    //   this.posts=obj;
+    //   this.data=obj;
     // })
-    console.log(url);
+    console.log(url);    
+    
     this.data = this._http.get(url).map(x => x.json());
   }
 
